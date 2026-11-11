@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavin</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#fdfbfb,#ebedee);
+overflow-x:hidden;
+}
+
+/* Header */
+
+header{
+position:sticky;
+top:0;
+width:100%;
+background:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+z-index:100;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#222;
+letter-spacing:2px;
+}
+
+.logo span{
+color:#040404;
+}
+
+nav a{
+text-decoration:none;
+margin-left:25px;
+font-size:17px;
+color:#444;
+transition:.3s;
+}
+
+nav a:hover{
+color:#e91e63;
+}
+
+/* Hero */
+
+.hero{
+height:300px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+color:#fff;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+/* Shop */
+
+.shop{
+padding:60px 5%;
+}
+
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:40px;
+color:#222;
+}
+
+.product-slider{
+overflow:hidden;
+}
+
+.products{
+display:flex;
+gap:25px;
+width:max-content;
+animation:scroll 30s linear infinite;
+}
+
+.products:hover{
+animation-play-state:paused;
+}
+
+.card{
+width:280px;
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+transition:.4s;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.discount{
+position:absolute;
+top:15px;
+left:15px;
+background:#e91e63;
+color:#fff;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+}
+
+.wishlist{
+position:absolute;
+top:15px;
+right:15px;
+background:#fff;
+width:40px;
+height:40px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:20px;
+cursor:pointer;
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.info{
+padding:18px;
+}
+
+.info h3{
+font-size:22px;
+margin-bottom:8px;
+color:#222;
+}
+
+.price{
+font-size:24px;
+font-weight:bold;
+color:#e91e63;
+margin:10px 0;
+}
+
+.old-price{
+text-decoration:line-through;
+color:gray;
+font-size:16px;
+margin-left:8px;
+}
+
+.rating{
+color:#ffc107;
+margin-bottom:15px;
+}
+
+.btns{
+display:flex;
+justify-content:space-between;
+}
+
+.btn{
+padding:10px 18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:15px;
+font-weight:bold;
+transition:.3s;
+}
+
+.cart{
+background:#e91e63;
+color:#fff;
+}
+
+.buy{
+background:#222;
+color:#fff;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+@keyframes scroll{
+
+0%{
+transform:translateX(100%);
+}
+
+100%{
+transform:translateX(-100%);
+}
+
+}
+
+footer{
+margin-top:50px;
+padding:25px;
+background:#111;
+color:#fff;
+text-align:center;
+}
+footer{
+margin-top:50px;
+padding:25px;
+background:#111;
+color:#fff;
+text-align:center;
+}
+
+/* Pagination */
+
+.pagination{
+display:flex;
+justify-content:center;
+align-items:center;
+margin:50px 0;
+gap:12px;
+}
+
+.pagination a{
+text-decoration:none;
+width:45px;
+height:45px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#fff;
+color:#333;
+border-radius:50%;
+font-size:18px;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.pagination a:hover{
+background:#e91e63;
+color:#fff;
+transform:translateY(-5px);
+}
+
+.pagination .active{
+background:#1ee95e;
+color:#fff;
+}
+/* Footer */
+
+footer{
+background:#111;
+color:#fff;
+padding:60px 8% 20px;
+margin-top:50px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(4, 1fr);
+gap:15px;
+margin-bottom:30px;
+}
+
+.footer-box h2,
+.footer-box h3{
+margin-bottom:20px;
+color:hsl(336, 19%, 95%);
+}
+
+.footer-box p{
+line-height:1.8;
+color:#ddd;
+}
+
+.footer-box ul{
+list-style:none;
+}
+
+.footer-box ul li{
+margin:10px 0;
+}
+
+.footer-box ul li a{
+text-decoration:none;
+color:#ddd;
+transition:.3s;
+}
+
+.footer-box ul li a:hover{
+color:hsl(336, 15%, 94%);
+padding-left:5px;
+}
+
+.copyright{
+text-align:center;
+color:#bbb;
+font-size:16px;
+margin-top:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Kavin <span></span>
+</div>
+
+<nav>
+
+<a href="http://localhost:52330/fashion%20site/index.html">Home</a>
+<a href="http://localhost:52330/fashion%20site/Blog.html">Blog</a>
+<a href="http://localhost:52330/Fashion%20site/Shoppage.html">Shop</a>
+<a href="http://localhost:52330/fashion%20site/about.html">About</a>
+<a href="http://localhost:52330/fashion%20site/contact.html">Contact</a>
+<a href="http://localhost:52330/fashion%20site/cart.html">🛒</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>New Fashion Collection</h1>
+
+<p>Style That Speaks for You</p>
+
+</section>
+
+<section class="shop">
+
+<h2 class="section-title">Trending Products</h2>
+
+<div class="product-slider">
+
+<div class="products">
+    <!-- Product 1 -->
+<div class="card">
+    <span class="discount">30% OFF</span>
+    <span class="wishlist">♡</span>
+    <img src="index5.jpeg" alt="Women's Dress">
+
+    <div class="info">
+        <h3>Women's Floral Dress</h3>
+        <div class="price">₹1,499 <span class="old-price">₹2,199</span></div>
+        <div class="rating">★★★★★</div>
+
+        <div class="btns">
+            <button class="btn cart">Add to Cart</button>
+            <button class="btn buy">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 2 -->
+<div class="card">
+    <span class="discount">25% OFF</span>
+    <span class="wishlist">♡</span>
+    <img src="index9.jpeg" alt="Men Shirt">
+
+    <div class="info">
+        <h3>Men's Casual Shirt</h3>
+        <div class="price">₹999 <span class="old-price">₹1,399</span></div>
+        <div class="rating">★★★★☆</div>
+
+        <div class="btns">
+            <button class="btn cart">Add to Cart</button>
+            <button class="btn buy">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 3 -->
+<div class="card">
+    <span class="discount">40% OFF</span>
+    <span class="wishlist">♡</span>
+    <img src="pi.jpeg" alt="Kids Wear">
+
+    <div class="info">
+        <h3>Kids Party Wear</h3>
+        <div class="price">₹799 <span class="old-price">₹1,299</span></div>
+        <div class="rating">★★★★★</div>
+
+        <div class="btns">
+            <button class="btn cart">Add to Cart</button>
+            <button class="btn buy">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 4 -->
+<div class="card">
+    <span class="discount">20% OFF</span>
+    <span class="wishlist">♡</span>
+    <img src="p55.jpeg" alt="Lehanga">
+
+    <div class="info">
+        <h3>Designer Lehanga</h3>
+        <div class="price">₹2,499 <span class="old-price">₹3,099</span></div>
+        <div class="rating">★★★★★</div>
+
+        <div class="btns">
+            <button class="btn cart">Add to Cart</button>
+            <button class="btn buy">Buy Now</button>
+        </div>
+    </div>
+</div>
+<!-- Product 5 -->
+<div class="card">
+    <span class="discount">35% OFF</span>
+    <span class="wishlist">♡</span>
+    <img src="pii3.jpeg" alt="Women's Top">
+
+    <div class="info">
+        <h3>Women's Stylish Top</h3>
+        <div class="price">₹899 <span class="old-price">₹1,399</span></div>
+        <div class="rating">★★★★★</div>
+
+        <div class="btns">
+            <button class="btn cart">Add to Cart</button>
+            <button class="btn buy">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 6 -->
+<div class="card">
+    <span class="discount">30% OFF</span>
+    <span class="wishlist">♡</span>
+    <img src="n10.jpeg" alt="Men's Jacket">
+
+    <div class="info">
+        <h3>Men's Denim Jacket</h3>
+        <div class="price">₹1,999 <span class="old-price">₹2,799</span></div>
+        <div class="rating">★★★★☆</div>
+
+        <div class="btns">
+            <button class="btn cart">Add to Cart</button>
+            <button class="btn buy">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 7 -->
+<div class="card">
+    <span class="discount">15% OFF</span>
+    <span class="wishlist">♡</span>
+    <img src="index18.webp" alt="Shoes">
+
+    <div class="info">
+        <h3>Premium Sneakers</h3>
+        <div class="price">₹2,299 <span class="old-price">₹2,699</span></div>
+        <div class="rating">★★★★★</div>
+
+        <div class="btns">
+            <button class="btn cart">Add to Cart</button>
+            <button class="btn buy">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+
+
+</div> <!-- End .products -->
+</div> <!-- End .product-slider -->
+</section>
+
+<!-- Pagination -->
+<div class="pagination">
+    <a href="http://localhost:52330/fashion%20site/Product%20details.html" class="active">1</a>
+    <a href="http://localhost:52330/fashion%20site/shopp.html">2</a>
+    <a href="http://localhost:52330/fashion%20site/Shop.html">3</a>
+    <a href="">Next</a>
+</div>
+<footer>
+    <footer>
+
+<div class="footer-container">
+
+<div class="footer-box">
+<h2>Kavin Fashion</h2>
+<p>
+Discover the latest fashion trends with premium quality clothing for Men, Women, and Kids. Dress with confidence and style.
+</p>
+</div>
+
+<div class="footer-box">
+<h3>Customer Service</h3>
+<ul>
+<li><a href="http://localhost:52330/fashion%20site/help.html">Help</a></li>
+<li><a href="http://localhost:52330/fashion%20site/terms.html">Terms & Conditions</a></li>
+<li><a href="http://localhost:52330/fashion%20site/track.html">Track My Order</a></li>
+<li><a href="http://localhost:52330/fashion%20site/privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+
+<div>
+<div class="footer-box">
+<h3>Contact Us</h3>
+<p>📍Sai Nagar 8th Line,Kovur Road,Kandukur</p>
+<p>📞 +91 6305248203</p>
+<p>@kavinfashion.com</p>
+</div>
+
+</div>
+</footer>
+
+<!-- COPYRIGHT -->
+<div class="copyright">
+    <p>© 2026 Kavin - All Rights Reserved</p>
+</div>
+
+</section>
+
+</body>
+</html>

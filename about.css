@@ -1,0 +1,406 @@
+/* GOOGLE FONT */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* HEADER */
+.header{
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: 1px;
+}
+
+.navbar{
+    display: flex;
+    gap: 35px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color: #e63946;
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icons i{
+    transition: 0.3s;
+}
+
+.icons i:hover{
+    color: #e63946;
+}
+
+/* HERO SECTION */
+.about-hero{
+    width: 100%;
+    height: 400px;
+    background: url('a4.avif') center/cover no-repeat;
+    position: relative;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay h1{
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.overlay p{
+    color: #eee;
+    font-size: 18px;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* ABOUT SECTION */
+.about-section{
+    width: 100%;
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: #fff;
+}
+
+.about-image img{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.about-content h2{
+    font-size: 45px;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.about-content p{
+    font-size: 15px;
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.about-content button{
+    margin-top: 15px;
+    width: 200px;
+    height: 55px;
+    border: none;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.about-content button:hover{
+    background: #e63946;
+}
+
+/* SECTION TITLE */
+.section-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2{
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.section-title p{
+    color: #666;
+    font-size: 16px;
+}
+
+/* SERVICES */
+.services{
+    width: 100%;
+    padding: 90px 8%;
+    background: #f8f8f8;
+}
+
+.service-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+
+.service-box{
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.service-box:hover{
+    transform: translateY(-8px);
+}
+
+.service-box i{
+    font-size: 45px;
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.service-box h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-box p{
+    color: #666;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* TEAM SECTION */
+.team{
+    width: 100%;
+    padding: 90px 8%;
+    background: #fff;
+}
+
+.team-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 35px;
+}
+
+.team-card{
+    background: #f8f8f8;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.team-card:hover{
+    transform: translateY(-8px);
+}
+
+.team-card img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.team-card h3{
+    font-size: 24px;
+    margin-top: 20px;
+    color: #111;
+}
+
+.team-card p{
+    color: #666;
+    margin: 10px 0 25px;
+    font-size: 15px;
+}
+
+/* FOOTER */
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#111;
+    color:#fff;
+    padding:60px 8% 20px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.footer-box{
+    flex:1;
+    min-width:220px;
+}
+
+.footer-box h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.footer-box h3{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.footer-box p{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+.footer-box a{
+    display:block;
+    color:#ccc;
+    text-decoration:none;
+    margin:10px 0;
+    transition:.3s;
+}
+
+.footer-box a:hover{
+    color:#fff;
+    padding-left:5px;
+}
+
+.social-icons{
+    margin-top:20px;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:42px;
+    height:42px;
+    border:1px solid #555;
+    border-radius:50%;
+    color:#fff;
+    margin-right:10px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#fff;
+    color:#111;
+}
+
+.footer-bottom{
+    margin-top:40px;
+    border-top:1px solid #333;
+    padding-top:20px;
+    text-align:center;
+    color:#aaa;
+    font-size:15px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .footer-container{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .footer-box{
+        width:100%;
+    }
+
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom{
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 20px;
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+
+    .footer-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .overlay h1{
+        font-size: 45px;
+    }
+}
+
+@media(max-width: 500px){
+
+    .header{
+        padding: 0 5%;
+    }
+
+    .about-section,
+    .services,
+    .team{
+        padding: 60px 5%;
+    }
+
+    .overlay h1{
+        font-size: 34px;
+    }
+
+    .overlay p{
+        font-size: 15px;
+    }
+
+    .about-content h2{
+        font-size: 32px;
+    }
+
+    .section-title h2{
+        font-size: 32px;
+    }
+
+    .about-content button{
+        width: 100%;
+    }
+}

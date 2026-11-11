@@ -1,0 +1,380 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#222;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo a{
+    font-size:30px;
+    font-weight:700;
+    color:#111;
+}
+
+.navbar{
+    display:flex;
+    gap:30px;
+}
+
+.navbar a{
+    color:#111;
+    font-size:17px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.navbar a:hover,
+.navbar .active{
+    color:#d62828;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.contact-hero{
+    height:45vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+
+.contact-hero h1{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.contact-hero p{
+    font-size:18px;
+}
+
+/* ===========================
+   CONTACT DETAILS
+=========================== */
+
+.contact-container{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+    padding:80px 8%;
+    flex-wrap:wrap;
+}
+
+.contact-info{
+    flex:1;
+    min-width:320px;
+}
+
+.contact-info span{
+    color:#888;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+.contact-info h2{
+    margin:15px 0;
+    font-size:34px;
+}
+
+.contact-info h3{
+    margin:30px 0 20px;
+}
+
+.contact-info p{
+    margin:18px 0;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:#555;
+}
+
+.contact-info i{
+    color:#d62828;
+    font-size:18px;
+}
+
+.map{
+    flex:1;
+    min-width:320px;
+}
+
+.map iframe{
+    width:100%;
+    height:420px;
+    border:none;
+    border-radius:10px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.form-section{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+    padding:80px 8%;
+    flex-wrap:wrap;
+}
+
+form{
+    flex:1;
+    min-width:340px;
+}
+
+form span{
+    color:#888;
+}
+
+form h2{
+    margin:15px 0 25px;
+    font-size:34px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    outline:none;
+    font-size:16px;
+}
+
+form textarea{
+    resize:none;
+}
+
+form button{
+    padding:14px 35px;
+    border:none;
+    background:#111;
+    color:#fff;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+form button:hover{
+    background:#d62828;
+}
+
+/* ===========================
+   PEOPLE
+=========================== */
+
+.people{
+    flex:1;
+    min-width:300px;
+}
+
+.person{
+    display:flex;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.person img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    margin-right:20px;
+}
+
+.person h4{
+    margin-bottom:5px;
+}
+
+.person p{
+    color:#666;
+    font-size:15px;
+}
+
+/* ===========================
+   NEWSLETTER
+=========================== */
+
+.newsletter{
+    background:#111;
+    color:#fff;
+    padding:60px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.newsletter h2{
+    margin-bottom:10px;
+}
+
+.newsletter input{
+    width:320px;
+    padding:15px;
+    border:none;
+    outline:none;
+}
+
+.newsletter button{
+    padding:15px 25px;
+    border:none;
+    background:#d62828;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    background:#1b1b1b;
+    color:#fff;
+    padding:60px 8% 20px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.footer-box{
+    flex:1;
+    min-width:220px;
+}
+
+.footer-box h2,
+.footer-box h3{
+    margin-bottom:20px;
+}
+
+.footer-box p{
+    color:#bbb;
+    margin-bottom:10px;
+    line-height:1.8;
+}
+
+.footer-box a{
+    display:block;
+    color:#bbb;
+    margin:10px 0;
+    transition:.3s;
+}
+
+.footer-box a:hover{
+    color:#fff;
+    padding-left:5px;
+}
+
+.social-icons{
+    margin-top:20px;
+}
+
+.social-icons a{
+    width:42px;
+    height:42px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background:#333;
+    color:#fff;
+    border-radius:50%;
+    margin-right:10px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#d62828;
+}
+
+.footer-bottom{
+    margin-top:40px;
+    border-top:1px solid #444;
+    text-align:center;
+    padding-top:20px;
+    color:#bbb;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:991px){
+
+.header{
+    flex-direction:column;
+    gap:20px;
+}
+
+.navbar{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.contact-container,
+.form-section{
+    flex-direction:column;
+}
+
+.newsletter{
+    flex-direction:column;
+    text-align:center;
+}
+
+.newsletter input{
+    width:100%;
+    max-width:400px;
+}
+
+.footer-container{
+    flex-direction:column;
+}
+
+.contact-hero h1{
+    font-size:40px;
+}
+
+}
